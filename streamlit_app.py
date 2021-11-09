@@ -79,7 +79,7 @@ else:
 # create checkbox to hide graph
 hide = st.sidebar.checkbox('Hide all country data')
 if not hide:
-  fig_years = px.scatter(data, x='Year', y="Total_Medals",color='Continent', hover_name='Country_Name')
+  fig_years = px.scatter(data, x='Year', y="Total_Medals",color='Country_Name', facet_col ='Continent')
   st.write(fig_years)
 
 # -----------------------
